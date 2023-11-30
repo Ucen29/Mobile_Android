@@ -81,11 +81,11 @@ Mobile.setText(findTestObject('Object Repository/My Task/Edit_description'), edi
 
 Mobile.delay(3)
 
-//// Membuat TouchAction Wait PS
-//TouchAction touchAction1 = new TouchAction(driver)
-//touchAction1.tap(PointOption.point(centerX1, centerY1))
-//.waitAction()
-//.perform()
+// Membuat TouchAction Wait PS
+TouchAction touchAction1 = new TouchAction(driver)
+touchAction1.tap(PointOption.point(centerX1, centerY1))
+.waitAction()
+.perform()
 
 // Membuat TouchAction Edit PS
 TouchAction touchAction2 = new TouchAction(driver)
