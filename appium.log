@@ -100,3 +100,8 @@
 [35m[HTTP][39m [90m{}[39m
 [35m[HTTP][39m [37m<-- GET /wd/hub/session/8b8cf84f-e9cd-40cf-99fb-7a4dd6a44b37/screenshot [39m[32m200[39m [90m362 ms - 207382[39m
 [35m[HTTP][39m [90m[39m
+[35m[BaseDriver][39m Shutting down because we waited 1800 seconds for a command
+[35m[Appium][39m Closing session, cause was 'New Command Timeout of 1800 seconds expired. Try customizing the timeout using the 'newCommandTimeout' desired capability'
+[35m[Appium][39m Removing session '8b8cf84f-e9cd-40cf-99fb-7a4dd6a44b37' from our master session list
+[35m[UiAutomator2][39m Did not get confirmation UiAutomator2 deleteSession worked; Error was: UnknownError: An unknown server-side error occurred while processing the command. Original error: 'DELETE /' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+[35m[UiAutomator2][39m Restoring hidden api policy to the device default configuration
