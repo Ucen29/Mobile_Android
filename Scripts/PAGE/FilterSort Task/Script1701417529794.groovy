@@ -68,7 +68,7 @@ int height1 = 53
 int centerX1 = x1 + (width1 / 2)
 int centerY1 = y1 + (height1 / 2)
 
-// Membuat TouchAction Sort Task
+// Membuat TouchAction Sort Task 
 TouchAction touchAction1 = new TouchAction(driver)
 touchAction1.tap(PointOption.point(centerX1, centerY1)).perform()
 
