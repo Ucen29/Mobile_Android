@@ -97,3 +97,7 @@ Mobile.tap(findTestObject('Object Repository/My Task/Tap_tanggal',
 	[('tanggal'):tanggal2]), 10)
 
 Mobile.tap(findTestObject('Object Repository/My Task/Tap_oke'), 10)
+
+Mobile.tap(findTestObject('Object Repository/My Task/Tap_cancelEdit'), 10)
+
+//Mobile.tap(findTestObject('Object Repository/My Task/Tap_saveEdit'), 10)
