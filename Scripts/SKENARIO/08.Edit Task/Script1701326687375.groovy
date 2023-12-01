@@ -18,9 +18,11 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 def task = 'Task WS Custom Regression 1311_11'
+
 def desc = 'Task WS Custom Regression 1311_11 Edit'
 
-Mobile.callTestCase(findTestCase('PAGE/Edit Task'),
-	[('listTask') : task,
-		('listTask'):task,
-		('edit_desc'):desc], FailureHandling.STOP_ON_FAILURE)
+Mobile.callTestCase(findTestCase('PAGE/Edit Task'), 
+	[('listTask') : task, 
+	('listTask') : task, 
+	('edit_desc') : desc], FailureHandling.STOP_ON_FAILURE)
+

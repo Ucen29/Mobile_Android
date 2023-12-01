@@ -80,8 +80,7 @@ int centerY2 = y2 + (height2 / 2)
 
 // Membuat TouchAction dan melakukan tap pada titik tengah area yang ditentukan
 TouchAction touchAction = new TouchAction(driver)
-touchAction.tap(PointOption.point(centerX, centerY))
-.perform()
+touchAction.tap(PointOption.point(centerX, centerY)).perform()
 
 Mobile.waitForElementPresent(findTestObject('Object Repository/My Task/Tap_yes'), 30)
 

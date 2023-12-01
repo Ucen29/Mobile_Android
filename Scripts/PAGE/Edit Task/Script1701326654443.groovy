@@ -37,41 +37,37 @@ Mobile.tap(findTestObject('Object Repository/My Task/Klik_listTask', [('listTask
 Mobile.waitForElementPresent(findTestObject('Object Repository/My Task/Klik_listTask', [('listTask') : listTask]), 30)
 
 // driver dari MobileDriverFactory
-def driver = MobileDriverFactory.getDriver()
+AndroidDriver<?> driver = MobileDriverFactory.getDriver()
 
 // Koodinat Edit Desc
-int x = 335
-int y = 514
-int width = 56
-int height = 56
-
-// Koordinat Wait PS
-int x1 = 28
-int y1 = 745
-int width1 = 664
-int height1 = 199
+int x1 = 335
+int y2 = 514
+int width1 = 56
+int height2 = 56
 
 // Koordinat Edit PS
-int x2 = 194
-int y2 = 745
-int width2 = 166
-int height2 = 66
+int x = 360
+int y = 745
+int width = 166
+int height = 66
 
 // Menghitung koordinat Edit Desc
+int centerX1 = x1 + (width1 / 2)
+int centerY2 = y2 + (height2 / 2)
+
+// Menghitung koordinat Edit PS
 int centerX = x + (width / 2)
 int centerY = y + (height / 2)
 
-// Menghitung koordinat Wait PS
-int centerX1 = x1 + (width1 / 2)
-int centerY1 = y1 + (height1 / 2)
-
-// Menghitung koordinat Edit PS
-int centerX2 = x2 + (width2 / 2)
-int centerY2 = y2 + (height2 / 2)
+// Membuat TouchAction Edit PS
+TouchAction touchAction = new TouchAction(driver)
+println('berhasil tap')
+touchAction.tap(PointOption.point(centerX, centerY)).perform()
+println('sukses tap')
 
 // Membuat TouchAction edit Desc
-TouchAction touchAction = new TouchAction(driver)
-touchAction.tap(PointOption.point(centerX, centerY)).perform()
+TouchAction touchAction1 = new TouchAction(driver)
+touchAction1.tap(PointOption.point(centerX1, centerY2)).perform()
 
 Mobile.waitForElementPresent(findTestObject('Object Repository/My Task/Edit_description'), 30)
 
@@ -79,15 +75,7 @@ Mobile.tap(findTestObject('Object Repository/My Task/Edit_description'), 30)
 
 Mobile.setText(findTestObject('Object Repository/My Task/Edit_description'), edit_desc, 30)
 
-Mobile.delay(3)
+driver.pressKey(new KeyEvent(AndroidKey.BACK))
+println('sukses')
 
-// Membuat TouchAction Wait PS
-TouchAction touchAction1 = new TouchAction(driver)
-touchAction1.tap(PointOption.point(centerX1, centerY1))
-.waitAction()
-.perform()
-
-// Membuat TouchAction Edit PS
-TouchAction touchAction2 = new TouchAction(driver)
-touchAction2.tap(PointOption.point(centerX2, centerY2)).perform()
 
