@@ -76,6 +76,15 @@ Mobile.swipe(startX, endY, endX, startY)
 Mobile.tap(findTestObject('Object Repository/My Task/Tap_startDate',
 	[('start_date'):start_date]), 10)
 
+Mobile.tap(findTestObject('Object Repository/My Task/Tap_pilihTahun'), 10)
+
+Mobile.tap(findTestObject('Object Repository/My Task/Tap_tahun',
+	[('pilih_tahun'):pilih_tahun]), 10)
+
+for (int i = 0; i < 5; i++) {
+	Mobile.tap(findTestObject('Object Repository/My Task/Tap_prev'), 10)
+}
+
 Mobile.tap(findTestObject('Object Repository/My Task/Tap_tanggal',
 	[('tanggal'):tanggal1]), 10)
 
