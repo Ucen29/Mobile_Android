@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MobileElementEntity>
    <description></description>
-   <name>Edit_ps</name>
+   <name>Tap_oke</name>
    <tag></tag>
-   <elementGuidId>539be1a3-d440-4ea6-8008-8d2d544e51c3</elementGuidId>
+   <elementGuidId>f182441c-9bfb-489e-9984-09f48e02c1fa</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>//android.widget.CheckBox[contains(@content-desc, 'PS 03')]</locator>
+   <locator>//android.widget.Button[contains(@content-desc, 'OKE')]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
 </MobileElementEntity>

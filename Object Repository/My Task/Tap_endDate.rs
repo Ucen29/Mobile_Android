@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MobileElementEntity>
    <description></description>
-   <name>Edit_ps</name>
+   <name>Tap_endDate</name>
    <tag></tag>
-   <elementGuidId>539be1a3-d440-4ea6-8008-8d2d544e51c3</elementGuidId>
+   <elementGuidId>1a5d4670-d39b-4af5-b53c-480a8087483d</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>//android.widget.CheckBox[contains(@content-desc, 'PS 03')]</locator>
+   <locator>//android.widget.ImageView[contains(@text, '${end_date}')]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
 </MobileElementEntity>

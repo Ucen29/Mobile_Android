@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MobileElementEntity>
    <description></description>
-   <name>Edit_ps</name>
+   <name>Tap_tanggal</name>
    <tag></tag>
-   <elementGuidId>539be1a3-d440-4ea6-8008-8d2d544e51c3</elementGuidId>
+   <elementGuidId>8a97694b-ac21-4f1b-ba1b-fd71ddede736</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>//android.widget.CheckBox[contains(@content-desc, 'PS 03')]</locator>
+   <locator>//android.view.View[contains(@content-desc, '${tanggal}')]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
 </MobileElementEntity>

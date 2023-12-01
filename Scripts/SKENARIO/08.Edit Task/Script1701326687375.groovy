@@ -18,11 +18,18 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 def task = 'Task WS Custom Regression 1311_11'
-
 def desc = 'Task WS Custom Regression 1311_11 Edit'
+def startdate = 'Mon, 20/11/2023'
+def enddate = 'Sat, 25/11/2023'
+def date1 = '4'
+def date2 = '29'
 
 Mobile.callTestCase(findTestCase('PAGE/Edit Task'), 
 	[('listTask') : task, 
 	('listTask') : task, 
-	('edit_desc') : desc], FailureHandling.STOP_ON_FAILURE)
+	('edit_desc') : desc,
+	('start_date'):startdate,
+	('end_date'):enddate,
+	('tanggal1'):date1,
+	('tanggal2'):date2], FailureHandling.STOP_ON_FAILURE)
 

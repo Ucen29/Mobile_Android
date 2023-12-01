@@ -40,34 +40,18 @@ Mobile.waitForElementPresent(findTestObject('Object Repository/My Task/Klik_list
 AndroidDriver<?> driver = MobileDriverFactory.getDriver()
 
 // Koodinat Edit Desc
-int x1 = 335
-int y2 = 514
-int width1 = 56
-int height2 = 56
-
-// Koordinat Edit PS
-int x = 360
-int y = 745
-int width = 166
-int height = 66
+int x = 335
+int y = 514
+int width = 56
+int height = 56
 
 // Menghitung koordinat Edit Desc
-int centerX1 = x1 + (width1 / 2)
-int centerY2 = y2 + (height2 / 2)
-
-// Menghitung koordinat Edit PS
 int centerX = x + (width / 2)
 int centerY = y + (height / 2)
 
-// Membuat TouchAction Edit PS
-TouchAction touchAction = new TouchAction(driver)
-println('berhasil tap')
-touchAction.tap(PointOption.point(centerX, centerY)).perform()
-println('sukses tap')
-
 // Membuat TouchAction edit Desc
 TouchAction touchAction1 = new TouchAction(driver)
-touchAction1.tap(PointOption.point(centerX1, centerY2)).perform()
+touchAction1.tap(PointOption.point(centerX, centerY)).perform()
 
 Mobile.waitForElementPresent(findTestObject('Object Repository/My Task/Edit_description'), 30)
 
@@ -76,6 +60,31 @@ Mobile.tap(findTestObject('Object Repository/My Task/Edit_description'), 30)
 Mobile.setText(findTestObject('Object Repository/My Task/Edit_description'), edit_desc, 30)
 
 driver.pressKey(new KeyEvent(AndroidKey.BACK))
-println('sukses')
 
+//Scroll top to buttom
+device_Height = Mobile.getDeviceHeight()
+device_Width = Mobile.getDeviceWidth()
+ 
+int startX = device_Width / 2
+int endX = startX
+int startY = device_Height * 0.30
+int endY = device_Height * 0.70
+ 
+'Swipe Vertical from top to bottom'
+Mobile.swipe(startX, endY, endX, startY)
 
+Mobile.tap(findTestObject('Object Repository/My Task/Tap_startDate',
+	[('start_date'):start_date]), 10)
+
+Mobile.tap(findTestObject('Object Repository/My Task/Tap_tanggal',
+	[('tanggal'):tanggal1]), 10)
+
+Mobile.tap(findTestObject('Object Repository/My Task/Tap_oke'), 10)
+
+Mobile.tap(findTestObject('Object Repository/My Task/Tap_endDate',
+	[('end_date'):end_date]), 10)
+
+Mobile.tap(findTestObject('Object Repository/My Task/Tap_tanggal',
+	[('tanggal'):tanggal2]), 10)
+
+Mobile.tap(findTestObject('Object Repository/My Task/Tap_oke'), 10)
