@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MobileElementEntity>
    <description></description>
-   <name>tap_ps</name>
+   <name>tap_close</name>
    <tag></tag>
-   <elementGuidId>acab3211-7b68-4ccc-b372-1d6edff2b9a3</elementGuidId>
+   <elementGuidId>54a7af66-7fd3-4ab1-9e09-bf3300df4521</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>//android.widget.CheckBox[@index='1']</locator>
+   <locator>//android.widget.Button[contains(@content-desc, 'Close')]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
 </MobileElementEntity>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MobileElementEntity>
    <description></description>
-   <name>tap_ps</name>
+   <name>tap_create</name>
    <tag></tag>
-   <elementGuidId>acab3211-7b68-4ccc-b372-1d6edff2b9a3</elementGuidId>
+   <elementGuidId>766a5264-2213-4616-922b-bf0d1e2a9e4b</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <locator>//android.widget.CheckBox[@index='1']</locator>
+   <locator>//android.widget.Button[contains(@content-desc, 'Create')]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
 </MobileElementEntity>

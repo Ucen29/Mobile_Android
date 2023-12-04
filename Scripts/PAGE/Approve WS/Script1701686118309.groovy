@@ -17,30 +17,23 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-def name = 'indra_adhiw'
-def pass = '@$%^&**^123'
-def cat_ws1 = 'RDG Mingguan (RDGM)'
-def cat_ws2 = 'RDG Bulanan (RDGB)'
-def cat_ws3 = 'Workspace Level Satker'
-def type_ws = 'Custom Workspace (RDGM Topical Laporan/Persetujuan)'
-def pimpinan = 'ENDANG TRIANTI'
-def nama_ws = 'Test Automate Mobile 2'
-def desc_ws = 'Semoga berjalan lancar'
-def tgl_awal = '7'
-def tgl_akhir = '31'
+'Get Device Height and Store in device_height variable'
+device_Height = Mobile.getDeviceHeight()
 
-Mobile.callTestCase(findTestCase('PAGE/Login'), 
-	[('username'):name,
-		('password'):pass], FailureHandling.STOP_ON_FAILURE)
+'Get Device Width and Store in device_Width variable'
+device_Width = Mobile.getDeviceWidth()
 
-Mobile.callTestCase(findTestCase('PAGE/Create WS'), 
-	[('pilih_cat'):cat_ws1,
-		('pilih_type'):type_ws,
-		('input_nama_ws'):nama_ws,
-		('input_desc_ws'):desc_ws,
-		('pilih_pimpinan'):pimpinan,
-		('pilih_tgl_awal'):tgl_awal,
-		('pilih_tgl_akhir'):tgl_akhir], FailureHandling.STOP_ON_FAILURE)
+'Storing the startX,endX values by dividing device height by 2 Because Y coordinates are constant'
+int startY = device_Height / 2
 
-//Mobile.closeApplication()
+'Here endY and startY values are equal for vertical Swiping for that assigning startY value to endY'
+int endY = startY
 
+'Storing the startX value'
+int startX = device_Width * 0.30
+
+'Storing the endX value'
+int endX = device_Width * 0.70
+
+'Here Y constant for Swipe Vertical Left to Right'
+Mobile.swipe(startX, startY, endX, endY)

@@ -110,4 +110,9 @@ int endY = device_Height * 0.70
 'Swipe Vertical from top to bottom'
 Mobile.swipe(startX, endY, endX, startY)
 
-Mobile.tap(findTestObject('Object Repository/Workspace/tap_ps'), 10)
+//Mobile.tap(findTestObject('Object Repository/Workspace/android.widget.CheckBox'), 10)
+
+Mobile.tap(findTestObject('Object Repository/Workspace/tap_create'), 10)
+
+Mobile.tap(findTestObject('Object Repository/Workspace/tap_close'), 10)
+
