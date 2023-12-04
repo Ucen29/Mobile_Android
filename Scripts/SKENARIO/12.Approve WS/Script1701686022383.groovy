@@ -17,4 +17,14 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-//test Push
+def name = 'endangtri'
+def pass = 'jh@#$%HJG'
+
+Mobile.callTestCase(findTestCase('PAGE/Login'), 
+	[('username'):name,
+		('password'):pass], FailureHandling.STOP_ON_FAILURE)
+
+Mobile.delay(2)
+
+Mobile.callTestCase(findTestCase('PAGE/Approve WS'), [:], FailureHandling.STOP_ON_FAILURE)
+
