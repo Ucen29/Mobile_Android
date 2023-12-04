@@ -88,3 +88,26 @@ Mobile.tap(findTestObject('Object Repository/Workspace/pilih_tanggal',
 	[('pilih_tgl'):pilih_tgl_akhir]), 10)
 
 Mobile.tap(findTestObject('Object Repository/My Task/Tap_oke'), 10)
+
+'Get Device Height and Store in device_height variable'
+device_Height = Mobile.getDeviceHeight()
+
+'Get Width Height and Store in device_Width variable'
+device_Width = Mobile.getDeviceWidth()
+ 
+'Storing the startX value by dividing device width by 2. Because x coordinates are constant for Vertical Swiping'
+int startX = device_Width / 2
+ 
+'Here startX and endX values are equal for vertical Swiping for that assigning startX value to endX'
+int endX = startX
+
+'Storing the startY value'
+int startY = device_Height * 0.30
+
+'Storing the endY value'
+int endY = device_Height * 0.70
+ 
+'Swipe Vertical from top to bottom'
+Mobile.swipe(startX, endY, endX, startY)
+
+Mobile.tap(findTestObject('Object Repository/Workspace/tap_ps'), 10)
