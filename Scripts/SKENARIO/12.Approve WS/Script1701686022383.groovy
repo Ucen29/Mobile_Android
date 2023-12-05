@@ -19,6 +19,7 @@ import org.openqa.selenium.Keys as Keys
 
 def name = 'endangtri'
 def pass = 'jh@#$%HJG'
+def list_ws = 'Test Automate Mobile'
 
 Mobile.callTestCase(findTestCase('PAGE/Login'), 
 	[('username'):name,
@@ -26,5 +27,6 @@ Mobile.callTestCase(findTestCase('PAGE/Login'),
 
 Mobile.delay(2)
 
-Mobile.callTestCase(findTestCase('PAGE/Approve WS'), [:], FailureHandling.STOP_ON_FAILURE)
+Mobile.callTestCase(findTestCase('PAGE/Approve WS'), 
+	[('ws_apprv'):list_ws], FailureHandling.STOP_ON_FAILURE)
 

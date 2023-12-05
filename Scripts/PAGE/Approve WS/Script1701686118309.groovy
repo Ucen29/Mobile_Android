@@ -64,3 +64,10 @@ Mobile.swipe(startX, startY, endX, endY)
 Mobile.delay(3)
 
 Mobile.tap(findTestObject('Object Repository/Approve Workspace/tap_my_approval'), 10)
+
+Mobile.tap(findTestObject('Object Repository/Approve Workspace/tap_list_workspace',
+	[('pilih_ws_apprv'):ws_apprv]), 10)
+
+Mobile.tap(findTestObject('Object Repository/Approve Workspace/tap_approve'), 10)
+
+Mobile.tap(findTestObject('Object Repository/Approve Workspace/tap_close'), 10)
