@@ -75,15 +75,30 @@ Mobile.tap(findTestObject('Object Repository/Create Task/tap_taskType'), 10)
 Mobile.tap(findTestObject('Object Repository/Create Task/pilih_taskType',
 	[('pilih_type'):task]), 10)
 
+
+device_Height = Mobile.getDeviceHeight()
+device_Width = Mobile.getDeviceWidth()
+
+int startX2 = device_Width / 2
+int endX2 = startX2
+int startY2 = device_Height * 0.30
+int endY2 = device_Height * 0.70
+ 
+'Swipe Vertical from top to bottom'
+Mobile.swipe(startX2, endY2, endX2, startY2)
+
 Mobile.delay (15)
 
 Mobile.tap(findTestObject('Object Repository/Create Task/tap_satker'), 20)
 
-// XPath atau metode pencarian lain untuk elemen yang ingin ditemukan
-//String objectXPath = Mobile.tap(findTestObject('Object Repository/Create Task/pilih_satker'), 10)
-
 // Maksimum iterasi untuk melakukan swipe
-int maxSwipes = 10
+int startX1 = 664 / 2
+int endX1 = startX1
+int startY1 = 279 * 0.30
+int endY1 = 279 * 0.70
+
+
+int maxSwipes = 2
 int swipeCount = 0
 boolean isElementFound = false
 
@@ -94,14 +109,9 @@ while (swipeCount < maxSwipes && !isElementFound) {
         Mobile.tap(findTestObject('Object Repository/Create Task/pilih_satker'),10)
 		
 	} else {
-		// Lakukan swipe jika objek belum ditemukan
-        Dimension size = driver.manage().window().getSize()
-        int startX = (int) (size.width * 0.8) // Mulai swipe dari 80% lebar layar
-        int endX = (int) (size.width * 0.2) // Swipe ke 20% lebar layar
-        int startY = size.height / 2 // Swipe pada tengah tinggi layar
-
-        // Melakukan swipe
-        Mobile.swipe(startX, startY, endX, startY, 1)
+//		Mobile.swipe(startX1, startY1, endX1, endY1)
+		Mobile.swipe(startX1, endY1, endX1, startY1)
         swipeCount++
+		println("Koordinat akhir: X = ${endX1}, Y = ${endY1}")
 	}
 }
