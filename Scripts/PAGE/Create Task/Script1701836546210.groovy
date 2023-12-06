@@ -92,11 +92,11 @@ Mobile.delay (15)
 Mobile.tap(findTestObject('Object Repository/Create Task/tap_satker'), 20)
 
 // Maksimum iterasi untuk melakukan swipe
-int startX1 = 664 / 2
-int endX1 = startX1
-int startY1 = 279 * 0.30
-int endY1 = 279 * 0.70
-
+def startX1 = (28 + 692) / 2
+def startY1 = (1086 + 1365) / 2
+def endX1 = startX1
+def endY1 = 1365
+int duration = 1000
 
 int maxSwipes = 2
 int swipeCount = 0
@@ -109,8 +109,7 @@ while (swipeCount < maxSwipes && !isElementFound) {
         Mobile.tap(findTestObject('Object Repository/Create Task/pilih_satker'),10)
 		
 	} else {
-//		Mobile.swipe(startX1, startY1, endX1, endY1)
-		Mobile.swipe(startX1, endY1, endX1, startY1)
+		Mobile.swipe(startX1, startY1, endX1, endY1, duration)
         swipeCount++
 		println("Koordinat akhir: X = ${endX1}, Y = ${endY1}")
 	}
