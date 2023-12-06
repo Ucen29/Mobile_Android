@@ -17,32 +17,19 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-def name = 'indra_adhiw'
-def pass = '@$%^&**^123'
-def cat_ws1 = 'RDG Mingguan (RDGM)'
-def cat_ws2 = 'RDG Bulanan (RDGB)'
-def cat_ws3 = 'Workspace Level Satker'
-def type_ws = 'Custom Workspace (RDGM Topical Laporan/Persetujuan)'
-def pimpinan = 'ENDANG TRIANTI'
-def nama_ws = 'Test Automate Mobile 5'
-def desc_ws = 'Semoga berjalan lancar'
-def tgl_awal = '7'
-def tgl_akhir = '31'
+def name = 'endangtri'
+def pass = 'jh@#$%HJG'
+def list_ws = 'Test Automate Mobile 5'
+def editName = 'Test Automate Mobile 5 Edit'
+def editDesc = 'Edit Workspace'
 
-Mobile.callTestCase(findTestCase('PAGE/Login'), 
+Mobile.callTestCase(findTestCase('PAGE/Login'),
 	[('username'):name,
 		('password'):pass], FailureHandling.STOP_ON_FAILURE)
 
 Mobile.delay(10)
 
-Mobile.callTestCase(findTestCase('PAGE/Create WS'), 
-	[('pilih_cat'):cat_ws1,
-		('pilih_type'):type_ws,
-		('input_nama_ws'):nama_ws,
-		('input_desc_ws'):desc_ws,
-		('pilih_pimpinan'):pimpinan,
-		('pilih_tgl_awal'):tgl_awal,
-		('pilih_tgl_akhir'):tgl_akhir], FailureHandling.STOP_ON_FAILURE)
-
-//Mobile.closeApplication()
-
+Mobile.callTestCase(findTestCase('PAGE/Edit WS'),
+	[('ws_apprv'):list_ws,
+		('edit_name'):editName,
+		('edit_desc'):editDesc], FailureHandling.STOP_ON_FAILURE)
