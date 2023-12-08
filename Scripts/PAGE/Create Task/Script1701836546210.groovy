@@ -29,6 +29,11 @@ import io.appium.java_client.android.AndroidKeyCode
 import io.appium.java_client.MobileElement
 import org.openqa.selenium.Dimension
 
+import static ScrollHeightWidth.customScroll
+import static ScrollDropdown.scrollDown
+
+
+
 Mobile.tap(findTestObject('Object Repository/Create Activity/tap_my_workspace'), 10)
 
 Mobile.delay(6)
@@ -91,14 +96,18 @@ Mobile.delay (15)
 
 Mobile.tap(findTestObject('Object Repository/Create Task/tap_satker'), 20)
 
-// Maksimum iterasi untuk melakukan swipe
-def startX1 = (28 + 692) / 2
-def startY1 = (1086 + 1365) / 2
-def endX1 = startX1
-def endY1 = 1365
-int duration = 1000
+//Mobile.tap(findTestObject('Object Repository/Create Task/pilih_satker'), 20)
 
-int maxSwipes = 2
+// Maksimum iterasi untuk melakukan swipe
+// Koodinat Edit Desc
+int startX1 = 28
+int startY1 = 1086
+int height1 = 279
+int width1 = 664
+int endX1 = startX1 + width1
+int endY1 = startY1 + height1
+
+int maxSwipes = 1
 int swipeCount = 0
 boolean isElementFound = false
 
@@ -109,8 +118,8 @@ while (swipeCount < maxSwipes && !isElementFound) {
         Mobile.tap(findTestObject('Object Repository/Create Task/pilih_satker'),10)
 		
 	} else {
-		Mobile.swipe(startX1, startY1, endX1, endY1, duration)
-        swipeCount++
-		println("Koordinat akhir: X = ${endX1}, Y = ${endY1}")
+		ScrollDropdown.scrollDown(startX1, startY1, endY1)
+		swipeCount++
+		
 	}
 }
