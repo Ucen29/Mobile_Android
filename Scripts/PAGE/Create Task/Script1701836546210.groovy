@@ -107,7 +107,7 @@ int width1 = 664
 int endX1 = startX1 + width1
 int endY1 = startY1 + height1
 
-int maxSwipes = 1
+int maxSwipes = 2
 int swipeCount = 0
 boolean isElementFound = false
 
@@ -118,7 +118,7 @@ while (swipeCount < maxSwipes && !isElementFound) {
         Mobile.tap(findTestObject('Object Repository/Create Task/pilih_satker'),10)
 		
 	} else {
-		ScrollDropdown.scrollDown(startX1, startY1, endY1)
+		ScrollDropdown.scrollDown(1)
 		swipeCount++
 		
 	}
