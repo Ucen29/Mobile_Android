@@ -20,11 +20,6 @@ import org.openqa.selenium.Keys as Keys
 def name = 'indra_adhiw'
 def pass = 'jh@#$%HJG'
 def namaWs = 'Test Automate Mobile 2'
-def taskType = 'Asesmen-RDG'
-def nameTask = 'Task Mobile'
-def descTask = 'Task Mobile semoga jalan'
-def tanggalAwal = '4'
-def tanggalAkhir = '15'
 
 
 Mobile.callTestCase(findTestCase('PAGE/Login'),
@@ -33,10 +28,5 @@ Mobile.callTestCase(findTestCase('PAGE/Login'),
 
 Mobile.delay(15)
 
-Mobile.callTestCase(findTestCase('PAGE/Create Task'),
-	[('list'):namaWs,
-		('task'):taskType,
-		('input_taskName'):nameTask,
-		('input_taskDesc'):descTask,
-		('startDate'):tanggalAwal,
-		('endDate'):tanggalAkhir], FailureHandling.STOP_ON_FAILURE)
+Mobile.callTestCase(findTestCase('PAGE/Start Task'),
+	[('list'):namaWs], FailureHandling.STOP_ON_FAILURE)

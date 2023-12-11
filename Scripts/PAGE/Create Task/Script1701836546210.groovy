@@ -96,9 +96,6 @@ Mobile.delay (15)
 
 Mobile.tap(findTestObject('Object Repository/Create Task/tap_satker'), 20)
 
-//Mobile.tap(findTestObject('Object Repository/Create Task/pilih_satker'), 20)
-
-// Maksimum iterasi untuk melakukan swipe
 // Koodinat Edit Desc
 int startX1 = 28
 int startY1 = 1086
@@ -123,3 +120,24 @@ while (swipeCount < maxSwipes && !isElementFound) {
 		
 	}
 }
+
+Mobile.tap(findTestObject('Object Repository/Create Task/tap_startDate'), 10)
+
+Mobile.tap(findTestObject('Object Repository/Create Task/pilih_startDate',
+	[('pilih_startDate'):startDate]),10)
+
+Mobile.tap(findTestObject('Object Repository/My Task/Tap_oke'), 10)
+
+Mobile.tap(findTestObject('Object Repository/Create Task/tap_endDate'), 10)
+
+Mobile.tap(findTestObject('Object Repository/Create Task/pilih_endDate',
+	[('pilih_endDate'):endDate]),10)
+
+Mobile.tap(findTestObject('Object Repository/My Task/Tap_oke'), 10)
+
+Mobile.tap(findTestObject('Object Repository/Workspace/tap_create'), 10)
+
+Mobile.waitForElementPresent(findTestObject('Object Repository/Workspace/tap_close'), 10)
+
+Mobile.tap(findTestObject('Object Repository/Workspace/tap_close'), 10)
+
