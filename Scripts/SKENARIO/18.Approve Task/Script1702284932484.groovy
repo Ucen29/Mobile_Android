@@ -35,6 +35,10 @@ def endDate = '25'
 def inputTime = '120'
 def penyetuju = 'MUSTHOFA KAMAL'
 
+//Login Approver
+def usernameApprv = 'kamal'
+def passwordApprv = '%$%#FF&^$'
+
 Mobile.callTestCase(findTestCase('PAGE/Login'),
 	[('username'):name,
 		('password'):pass], FailureHandling.STOP_ON_FAILURE)
@@ -55,4 +59,6 @@ Mobile.callTestCase(findTestCase('PAGE/Approve Task'),
 		('startDate'):startDate,
 		('endDate'):endDate,
 		('inputTime'):inputTime,
-		('penyetuju'):penyetuju], FailureHandling.STOP_ON_FAILURE)
+		('penyetuju'):penyetuju,
+		('usernameApprv'):usernameApprv,
+		('passwordApprv'):passwordApprv], FailureHandling.STOP_ON_FAILURE)
