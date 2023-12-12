@@ -55,6 +55,8 @@ Mobile.tap(findTestObject('Object Repository/Workspace/tap_category'), 10)
 Mobile.tap(findTestObject('Object Repository/Workspace/pilih_category',
 	[('pilih_cat'):pilih_cat]), 10)
 
+Mobile.delay(5)
+
 Mobile.tap(findTestObject('Object Repository/Workspace/tap_type'), 10)
 
 Mobile.tap(findTestObject('Object Repository/Workspace/pilih_type',

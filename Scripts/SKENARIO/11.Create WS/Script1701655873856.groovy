@@ -24,7 +24,7 @@ def cat_ws2 = 'RDG Bulanan (RDGB)'
 def cat_ws3 = 'Workspace Level Satker'
 def type_ws = 'Custom Workspace (RDGM Topical Laporan/Persetujuan)'
 def pimpinan = 'ENDANG TRIANTI'
-def nama_ws = 'Test Automate Mobile 5'
+def nama_ws = 'Test Automate Mobile Android 1'
 def desc_ws = 'Semoga berjalan lancar'
 def tgl_awal = '7'
 def tgl_akhir = '31'
@@ -33,7 +33,7 @@ Mobile.callTestCase(findTestCase('PAGE/Login'),
 	[('username'):name,
 		('password'):pass], FailureHandling.STOP_ON_FAILURE)
 
-Mobile.delay(10)
+Mobile.delay(15)
 
 Mobile.callTestCase(findTestCase('PAGE/Create WS'), 
 	[('pilih_cat'):cat_ws1,

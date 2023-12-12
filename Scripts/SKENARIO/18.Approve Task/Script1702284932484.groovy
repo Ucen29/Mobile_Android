@@ -17,10 +17,23 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+//add activity
 def name = 'indra_adhiw'
 def pass = 'jh@#$%HJG'
-def namaWs = 'Test Automate Mobile 2'
-
+def namaWs = 'Test Automate Mobile Android 1'
+def activity = 'Rekomendasi'
+def tabActivity = 'Rekomendasi'
+def NamaTask = 'Task Rekomendasi Mobile'
+def DescTask = 'Lancar lacar yaa'
+def typeTask = 'Komite'
+def komite = 'Komite Inovasi Bisnis Digital'
+def week = 'M5'
+def month = 'Agustus'
+def year = '2030'
+def startDate = '13'
+def endDate = '25'
+def inputTime = '120'
+def penyetuju = 'MUSTHOFA KAMAL'
 
 Mobile.callTestCase(findTestCase('PAGE/Login'),
 	[('username'):name,
@@ -28,5 +41,18 @@ Mobile.callTestCase(findTestCase('PAGE/Login'),
 
 Mobile.delay(15)
 
-Mobile.callTestCase(findTestCase('PAGE/Start Task'),
-	[('list'):namaWs], FailureHandling.STOP_ON_FAILURE)
+Mobile.callTestCase(findTestCase('PAGE/Approve Task'),
+	[('list'):namaWs,
+		('pilih_act'):activity,
+		('tabActivity'):tabActivity,
+		('NamaTask'):NamaTask,
+		('DescTask'):DescTask,
+		('task'):typeTask,
+		('komite'):komite,
+		('week'):week,
+		('month'):month,
+		('year'):year,
+		('startDate'):startDate,
+		('endDate'):endDate,
+		('inputTime'):inputTime,
+		('penyetuju'):penyetuju], FailureHandling.STOP_ON_FAILURE)

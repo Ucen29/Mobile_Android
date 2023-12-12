@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 
 def name = 'endangtri'
 def pass = 'jh@#$%HJG'
-def list_ws = 'Test Automate Mobile'
+def list_ws = 'Test Automate Mobile Android 1'
 
 Mobile.callTestCase(findTestCase('PAGE/Login'), 
 	[('username'):name,
