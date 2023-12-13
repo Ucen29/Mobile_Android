@@ -17,50 +17,39 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-//add activity
-def name = 'indra_adhiw'
-def pass = 'jh@#$%HJG'
-def namaWs = 'Test Automate Mobile Android 1'
-def activity = 'Rekomendasi'
-def tabActivity = 'Rekomendasi'
-def NamaTask = 'Task Rekomendasi Mobile'
-def DescTask = 'Lancar lacar yaa'
-def typeTask = 'Komite'
-def komite = 'Komite Inovasi Bisnis Digital'
-def week = 'M5'
-def month = 'Agustus'
-def year = '2030'
-def startDate = '13'
-def endDate = '25'
-def inputTime = '120'
-def penyetuju = 'MUSTHOFA KAMAL'
+import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory
+import com.kms.katalon.core.testobject.ConditionType
+import io.appium.java_client.TouchAction
+import io.appium.java_client.touch.offset.PointOption
 
-//Login Approver
-def usernameApprv = 'kamal'
-def passwordApprv = '%$%#FF&^$'
-def listTask = 'Task Rekomendasi Mobile'
+import io.appium.java_client.android.nativekey.AndroidKey
+import io.appium.java_client.android.nativekey.KeyEvent
+import io.appium.java_client.android.AndroidDriver
+import io.appium.java_client.android.AndroidKeyCode
+import io.appium.java_client.MobileElement
+import org.openqa.selenium.Dimension
+import io.appium.java_client.TouchAction
+import io.appium.java_client.android.AndroidDriver
+import org.openqa.selenium.Dimension
 
-Mobile.callTestCase(findTestCase('PAGE/Login'),
-	[('username'):name,
-		('password'):pass], FailureHandling.STOP_ON_FAILURE)
+import static ScrollHeightWidth.customScroll
+import static ScrollDropdown.scrollDown
 
-Mobile.delay(15)
+Mobile.tap(findTestObject('Object Repository/Chartpack/tap_chartpack'), 0)
 
-Mobile.callTestCase(findTestCase('PAGE/Approve Task'),
-	[('list'):namaWs,
-		('pilih_act'):activity,
-		('tabActivity'):tabActivity,
-		('NamaTask'):NamaTask,
-		('DescTask'):DescTask,
-		('task'):typeTask,
-		('komite'):komite,
-		('week'):week,
-		('month'):month,
-		('year'):year,
-		('startDate'):startDate,
-		('endDate'):endDate,
-		('inputTime'):inputTime,
-		('penyetuju'):penyetuju,
-		('usernameApprv'):usernameApprv,
-		('passwordApprv'):passwordApprv,
-		('listTask'):listTask], FailureHandling.STOP_ON_FAILURE)
+//Mobile.tap(findTestObject('Object Repository/Chartpack/tap_ddJenis'), 0)
+
+//Mobile.tap(findTestObject('Object Repository/Chartpack/tap_ddTahun'), 0)
+
+Mobile.waitForElementPresent(findTestObject('Object Repository/Chartpack/tap_viewPDF'), 10)
+
+//Melakukan type at posision
+int x = 587 + 42 / 2
+int y = 612 + 42 / 2
+
+Mobile.tapAtPosition(x, y)
+
+
+
+
+
