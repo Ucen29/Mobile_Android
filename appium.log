@@ -105,3 +105,13 @@
 [35m[HTTP][39m [90m{"using":"xpath","value":"//*[@class = 'android.widget.Button' and @resource-id = '' and (@text = '' or . = '')]"}[39m
 [35m[HTTP][39m [37m<-- POST /wd/hub/session/b48b3ed8-66ac-4b8f-9217-2ba25c1151d4/elements [39m[32m200[39m [90m320 ms - 139[39m
 [35m[HTTP][39m [90m[39m
+[35m[BaseDriver][39m Shutting down because we waited 1800 seconds for a command
+[35m[Appium][39m Closing session, cause was 'New Command Timeout of 1800 seconds expired. Try customizing the timeout using the 'newCommandTimeout' desired capability'
+[35m[Appium][39m Removing session 'b48b3ed8-66ac-4b8f-9217-2ba25c1151d4' from our master session list
+[35m[UiAutomator2][39m Did not get confirmation UiAutomator2 deleteSession worked; Error was: UnknownError: An unknown server-side error occurred while processing the command. Original error: 'DELETE /' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+[35m[ADB][39m Error sending command, reconnecting device and retrying: shell,am,force-stop,com.android.settings
+[35m[UiAutomator2][39m Unable to force stop app: Could not find a connected Android device in 30379840ms.
+[35m[ADB][39m Error sending command, reconnecting device and retrying: forward,--remove,tcp:8288
+[35m[UiAutomator2][39m Unable to remove system port forward: Could not find a connected Android device in 20005ms.
+[35m[UiAutomator2][39m Restoring hidden api policy to the device default configuration
+[35m[ADB][39m Error sending command, reconnecting device and retrying: shell,settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy
